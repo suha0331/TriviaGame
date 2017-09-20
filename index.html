@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/bootstrap/bootstrap.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>Can you be friends with a llama?</h1>
+            <div class="row">
+                <div id="timerDisplay" class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class>You have 30 seconds to find out! :)</h3></div>
+            </div>
+            <div id="test">
+                <ul class="question">
+                    <li>
+                        <h4 class>1. You are at the zoo. You see a llama exhibit and you...</h4>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q1" value="2">
+                            <label id="score1" class="answer">Run to the exhibit and take lots of pictures</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q1" value="1">
+                            <label class="answer">I like cheese</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q1" value="0">
+                            <label class="answer">Walk away muttering to yourself</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q1" value="0">
+                            <label class="answer">Run to the exhibit, climb in, and begin to cuddle the llamas</label>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="question">
+                    <li>
+                        <h4 class>2. You are mauled by an angry llama. What do you do?</h4>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q2" value="0">
+                            <label class="answer">Smack it with your purse and run away</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q2" value="2">
+                            <label id="score2" class="answer">Give it cookies, of course</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q2" value="1">
+                            <label class="answer">Pet it lovingly</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q2" value="0">
+                            <label class="answer">Cheese is so good.</label>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="question">
+                    <li>
+                        <h4 class>3. What color is your dream llama?</h4>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q3" value="2">
+                            <label id="score3" class="answer">Purple</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q3" value="0">
+                            <label class="answer">Yellow. Like cheese.</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q3" value="1">
+                            <label class="answer">Blue with a hint of lime green</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q3" value="0">
+                            <label class="answer">Brown</label>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="question">
+                    <li>
+                        <h4 class>4. You are in a helicopter. A llama is the pilot and you have just realized this. You exclaim,</h4>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q4" value="0">
+                            <label class="answer">"GET ME DOWN. GET ME DOWN! I DON'T TRUST LLAMAS WEARING HATS!"</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q4" value="1">
+                            <label class="answer">"Eep...well... I guess this is pretty cool."</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q4" value="0">
+                            <label class="answer">"I LIKE CHEEEEEEEESE!"</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q4" value="2">
+                            <label id="score4" class="answer">"SWEET, man!"</label>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="question">
+                    <li>
+                        <h4 class>5. Have you been answering with the "cheese" answers this whole time? Be honest...</h4>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q5" value="0">
+                            <label class="answer">No. I'm being truthful.</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q5" value="1">
+                            <label class="answer">Maybe...*Hides face in shame*</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q5" value="0">
+                            <label class="answer">OOH! Are we talking about cheese?</label>
+                        </div>
+                        <div class="answer">
+                            <input class="answer" type="radio" name="q5" value="2">
+                            <label id="score5" class="answer">I LIKE llamas. I wouldn't do that.</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <button id="result_button" class="query_btn btn btn-default btn-lg" value="test-result">Test Result</button>
+                    <br>
+                </div>
+            </div>
+     
+            <!--show only wrong answers on submit-->
+            <div id="result">
+                <div class="quizAnswers" id="correctAnswer1"></div>
+                <div class="quizAnswers" id="correctAnswer2"></div>
+                <div class="quizAnswers" id="correctAnswer3"></div>
+                <div class="quizAnswers" id="correctAnswer4"></div>
+                <div class="quizAnswers" id="correctAnswer5"></div>
+               <!-- show score upon submit-->
+                <div>
+                    <h2 class="quizScore" id="userScore"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    </div>
+</body>
+
+</html>
